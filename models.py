@@ -115,6 +115,3 @@ class Player:
             self.decrease_health()
         else:
             print("IT’S A DRAW!")
-
-
-player = Player
