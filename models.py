@@ -90,7 +90,7 @@ class Player:
         return settings.FAILURE
 
     def attack(self, enemy: Enemy) -> None:
-        attack = player.select_attack()
+        attack = self.select_attack()
         defence = enemy.select_defence()
         fight_result = self.fight(attack, defence)
 
