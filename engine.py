@@ -4,26 +4,24 @@ from exceptions import EnemyDown
 from exceptions import GameOver
 
 
-player1 = Player
-enemy1 = Enemy
-
-
 def get_player_name():
-	name = input('Type your name')
+	name = input('Type your name:\n')
 	return name
 
 
 def play():
-	try:
-		player1.select_attack()
-		enemy1.select_defence()
-		player1.attack()
-		player1.select_defence()
-		enemy1.select_attack()
-		player1.defence()
-	except EnemyDown:
-		print("YOU WON! ENEMY IS DOWN")
-	except GameOver:
-		print("GAME OVER, YOU ARE DEAD")
+	player1 = Player
+	enemy1 = Enemy
+	while True:
+		try:
+			player1.attack(enemy1)
+			player1.defence(enemy1)
+		except EnemyDown:
+			...
+			enemy1 = Enemy(enemy1.level + 1)
+		except GameOver:
+			break
 
 
+get_player_name()
+play()
