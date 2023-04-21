@@ -1,8 +1,4 @@
 class EnemyDown(Exception):
-    def down(self):
-        print(f"Enemy is down")
-
+    pass
 class GameOver(Exception):
-    def fail(self):
-        print(f"Game over")
-
+    pass

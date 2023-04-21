@@ -10,8 +10,9 @@ def get_player_name():
 
 
 def play():
-	player = Player
-	enemy = Enemy
+	name = get_player_name()
+	player = Player(name)
+	enemy = Enemy()
 	while True:
 		try:
 			player.attack(enemy)
